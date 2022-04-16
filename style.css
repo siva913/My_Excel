@@ -1,0 +1,289 @@
+body{
+    margin: 0;
+    overflow: hidden;/*scrolling disable*/
+    font-size: 14;
+}
+*{/*applies to all*/
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    position: relative;
+    
+    
+}
+
+
+.title-bar{
+    height: 5vh;
+    background-color: #107c41;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    
+}
+
+.menu-bar{
+    height: 5vh;
+    background-color: #107c41;
+    display:flex;
+    
+}
+.menu-item{
+    padding-left:10px;
+    padding-right:10px;
+    color: #fff;
+    font-size:18;
+    display:flex;
+    align-items: center;
+}
+.menu-item.selected{/*for home highlighting*/
+    background-color: #fff;
+    color: #107c41
+
+}
+.menu-item:hover{
+    background-color: #0b6333;
+    cursor:pointer;
+}
+.menu-item.selected:hover{/*for home highlighting*/
+    background-color: #fff;
+    cursor:default;
+}
+
+.menu-icon-bar{
+    height: 6vh;
+    display:flex;
+    background-color: rgb(241,241,241);
+    align-items: center;
+
+}
+.menu-icon{
+    padding-left:10px;
+    padding-right:10px;
+    display:flex;
+    align-items: center;
+    height:100%;
+}
+.menu-icon:hover{
+    background-color:lightgray;
+    cursor:pointer;
+}
+.font-family-selector{
+    width:150px;
+    font-family: 'Noto Sans';
+    
+}
+.selector{
+    height:30px;
+    font-size:18px;
+    
+}
+.selector option{
+    font-size:18px;
+}
+
+.formula-bar{
+    height: 5vh;
+    display:flex;
+    align-items: center;
+    padding-left:0.7rem;
+    padding-right:0.7rem;
+    background-color:rgb(241,241,241);
+    
+}
+
+.data-container{
+    height: 75vh;
+    display:flex;
+    flex-wrap: wrap;
+}
+.select-all{
+    height:30px;
+    width:30px;
+    border:1px solid lightgray;
+}
+.column-name-container{
+    height:30px;
+    width:calc(100vw - 30px);
+    border:1px solid lightgray;
+    display:flex; /*to align its child items in center*/
+    overflow: hidden;
+}
+.row-name-container{
+    width:30px;
+    height:calc(75vh - 30px);
+    border:1px solid lightgray;
+    overflow:hidden;
+}
+
+.input-cell-container{
+    height:calc(75vh - 30px);
+    width:calc(100vw - 30px);
+    border:1px solid lightgray;
+    overflow:scroll;
+
+}
+.input-cell.selected{
+    border:2px solid #107c41;
+}
+
+.sheet-bar{
+    height: 4vh;
+    display:flex;
+    align-items:center;
+   
+}
+.scroller{
+    width:70px;
+
+}
+
+.icon-left-scroll,.icon-right-scroll{
+    font-size: 30px;
+}
+.icon-left-scroll:hover,.icon-right-scroll:hover{
+    background-color:lightgray;
+    cursor:pointer;
+}
+.icon-add{
+    color:#107c41;
+    width:40px;
+}
+.icon-add:hover{
+    cursor:pointer;
+    transform:scale(1.25);
+}
+.sheet-tab-container{
+    border: 1px solid lightgray;
+    width: 1425px;
+    display: flex;
+}
+.sheet-tab{
+    
+    padding-left: 10px;
+    padding-right:10px;
+    width:80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight: 600;
+    border-right: 1px solid lightgray;
+
+}
+.sheet-tab.selected{
+    border-bottom:4px solid #107c41;
+}
+.sheet-tab:hover{
+    cursor:pointer;
+    background-color:lightgray;
+}
+.sheet-tab.selected:hover{
+    cursor:default;
+    background-color:#fff;
+}
+.column-name{
+    min-width:100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid lightgray;
+    font-weight: bold;/*to apply bold*/
+}
+.row-name{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:25px;
+    border-bottom:1px solid lightgray;
+    font-weight: bold;
+}
+.cell-row{
+    display:flex;
+}
+.input-cell{
+    min-width:100px;
+    min-height:25px;
+    border-right:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+    outline-color: #107c41;
+    font-size: 14px;
+    font-family:'Noto Sans';
+}
+.formula-editor{
+    height:70%;
+    border:1px solid lightgray;
+    background-color:#fff;
+    padding-left:0.7rem;
+    padding-right:0.7rem;
+    display:flex;
+    align-items: center;
+
+}
+.selected-cell{
+    width:120px;
+}
+.function-sign{
+    width:40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.formula-input{
+    width:1500px;
+    outline-color: #107c41;
+}
+.menu-icon.selected{
+    background-color: lightgray;
+}
+.input-cell.top-cell-selected {
+    border-top: none;
+}
+
+.input-cell.bottom-cell-selected {
+    border-bottom: 1px solid lightgray;
+}
+
+.input-cell.right-cell-selected {
+    border-right: 1px solid lightgray;
+}
+
+.input-cell.left-cell-selected {
+    border-left: none;
+}
+.icon-color-fill,.icon-color-text{
+    position: relative;
+}
+.color-picker{
+    position:absolute;
+    width:26px;
+    height:15px;
+    border:none;
+    padding:0;
+    top:30px;
+    left:9px;
+    cursor:pointer;
+}
+
+.sheet-options-modal{
+    position:absolute;
+    background-color: #fff;
+    height:60px;
+    width:70px;
+    bottom:4vh;
+    box-shadow: 0 0 3px 1px lightgray;
+}
+.sheet-rename,.sheet-delete{
+    height:30px;
+    font-weight:500;
+    font-size:16px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+.sheet-rename:hover,.sheet-delete:hover{
+    cursor:pointer;
+    background-color:lightgray;
+}
